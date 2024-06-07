@@ -9,8 +9,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 50px auto 73px;
-    padding: 0 110px;
+    margin: 50px auto 53px;
+    padding: 0;
   }
 }
 
@@ -19,7 +19,13 @@
   padding: 0;
   margin: 0;
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 708px;
+    margin: 0 auto;
+  }
+
   @media (min-width: $desktop-width) {
+    width: 1220px;
     display: grid;
     column-gap: 80px;
     grid-template-columns: 1fr 1fr;
@@ -135,6 +141,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    width: 108px;
   }
 
   &::after {
@@ -145,14 +152,19 @@
     height: 10px;
     mask-image: url("../../icons/stack.svg#arrow");
     mask-position: 100%;
-    mask-size: 32px 10px;
+    mask-size: 24px 10px;
     mask-repeat: no-repeat;
     display: block;
     top: 8px;
     left: 95px;
 
     @media (min-width: $tablet-width) {
-      top: 10px;
+      top: 9px;
+      left: 132px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 3px;
       left: 132px;
     }
   }
@@ -162,11 +174,11 @@
   }
 
   &:hover::after {
-    transform: scale(1.2);
+    mask-size: 32px 10px;
   }
 
   &:active::after {
-    transform: scale(1.2);
+    mask-size: 32px 10px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -197,10 +209,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0;
+    margin: 0 0 20px;
     padding: 77px 77px 59px 52px;
     width: 570px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 }
